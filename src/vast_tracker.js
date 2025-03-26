@@ -837,7 +837,7 @@ export class VASTTracker extends EventEmitter {
 
     if (invalidUrls.length) {
       this.emit('TRACKER-error', {
-        message: `Provided urls are malformed. url: ${invalidUrls}`,
+        message: `Provided urls are malformed. url: ${invalidUrls.join(', ')}`,
       });
     }
 
