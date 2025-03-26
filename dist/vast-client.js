@@ -3822,7 +3822,7 @@ class VASTTracker extends EventEmitter {
     } = util.filterUrlTemplates(URLTemplates);
     if (invalidUrls.length) {
       this.emit('TRACKER-error', {
-        message: "Provided urls are malformed. url: ".concat(invalidUrls)
+        message: "Provided urls are malformed. url: ".concat(invalidUrls.join(', '))
       });
     }
 
